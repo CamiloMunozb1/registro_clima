@@ -5,13 +5,18 @@ API nos ayuda a gestionar un registro del clima mas especifico para su ingreso a
 
 ## Caracteristicas principales
 -API REST con Flask: se gestionan los enrutadores para ingreso, registro, eliminacion y visualización de la informacion pasada por el usuario y la informacion dada por la API.
+
 -Conexion con PostegreSQL: persistencia de los datos de manera local.
+
 -Uso de la API: registro constante de la informacion del clima para consultar y plasmarla en la base de datos.
 
 ## Requisitos:
 -Python 3.x
+
 -PostgreSQL (Acceso a tu base de datos).
+
 -Acceso a la API (Token de integracion).
+
 -Dependencias de Python, las principales librerias usadas en este proyecto se usa pip:
        pip install Flask flask-cors psycopg2-binary python-dotenv requests
 
