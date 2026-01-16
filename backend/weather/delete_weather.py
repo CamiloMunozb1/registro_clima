@@ -38,7 +38,7 @@ def delete_weather():
             return jsonify({'Error' : 'no se encontro el id seleccionado.'}),400
         # Se hace una elimiacion en cascada para eliminar el id de la ciudad y esta misma en el registro.
         cursor.execute('''DELETE FROM view_clima WHERE city_id = %s''',(city_id))
-        cursor.execute('''DELETE FROM registro_clima WHERE city_id''',(register_id))
+        cursor.execute('''DELETE FROM registro_clima WHERE city_id = %s''',(register_id))
         if cursor.rowcount == 0: # Se verifica si el ID se encuentra junto con el registro.
             return jsonify({'Error' : 'no se encontro el id de la ciudad en el registo.'}),400
         conn.commit() # Subida de cambios a la base de datos.
